@@ -1,0 +1,23 @@
+{
+  "name": "newsletter-demo",
+  "version": "1.0.0",
+  "description": "newsletter demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lslozano/newesletter-demo.git"
+  },
+  "author": "lslozano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lslozano/newesletter-demo/issues"
+  },
+  "homepage": "https://github.com/lslozano/newesletter-demo#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
