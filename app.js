@@ -39,16 +39,14 @@ app.post("/", (req, res) => {
   };
 
   const jsonData = JSON.stringify(data);
-    
-  const url = `https://us17.api.mailchimp.com/3.0/lists/a1fbcb5571`;
+
+  const url = "https://us17.api.mailchimp.com/3.0/lists/a1fbcb5571";
+  // const url = `https://${US_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}`;
 
   const options = {
     method: "POST",
-    auth: `ls:7a05512acce9317b4295df7014315f72-us17`
+    auth: "ls:7a05512acce9317b4295df7014315f72-us17"
   }
-
-  // const url = `https://${US_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}`;
-
   // const options = {
   //   method: "POST",
   //   auth: `ls:${MAIL_KEY}`
@@ -61,9 +59,10 @@ app.post("/", (req, res) => {
       res.sendFile(`${__dirname}${failure}`);
     }
 
-    response.on("data", (data) => console.log(JSON.parse(data)));
+    response.on("data", (data) => console.log(JSON.parse(data)))
   })
-  
+
+  request.write(jsonData);
   request.end();
 })
 
